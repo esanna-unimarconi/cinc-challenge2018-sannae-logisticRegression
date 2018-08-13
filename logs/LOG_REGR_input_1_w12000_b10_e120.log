@@ -1,0 +1,226 @@
+INFO: 08/13/2018 13:23:10 Execution starts at: 2018-08-13 13:23:10.056863
+INFO: 08/13/2018 13:23:10 ############################## TRAIN ##############################
+INFO: 08/13/2018 13:23:10 
+*************************** init ***********************************
+Fs (frequenza di campionamento segnali): 200
+p_WINDOW_SIZE=x*Fs   dimensione della serie storica passata al modello: 12000
+p_INPUT_FEAT=13      numero di segnali in input: 1
+p_OUTPUT_CLASS=3     # 1,0,-1 (total of 3) - numero di classi contenute nel tracciato di target y (arousals):  1
+p_BATCH_SIZE=1000    numero di campioni per volta passati al modello 10
+p_EPOCHS=75          epoche, numero di volte che lo stesso report viene fatto ripassare: 120
+p_MODEL_FILE - file dove salvo i pesi del modello:LOG_REGR_input_1_w12000_b10_e120.hdf5
+p_DATASET_DIR - directory del dataset:/opt/PHYSIONET/ch2018_mini2
+p_LOG_FILE - log testuale in CSV:LOG_REGR_input_1_w12000_b10_e120.log
+p_KERAS_LOG_FILE - log testuale in CSV:LOG_REGR_input_1_w12000_b10_e120_Keras.log
+p_TENSORBOARD_LOGDIR - directory di log per Tensorboard:LOG_REGR_input_1_w12000_b10_e120
+********************************************************************
+INFO: 08/13/2018 13:23:10 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0675/tr04-0675
+INFO: 08/13/2018 13:23:20 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0679/tr04-0679
+INFO: 08/13/2018 13:23:21 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0695/tr04-0695
+INFO: 08/13/2018 13:23:22 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0699/tr04-0699
+INFO: 08/13/2018 13:23:23 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0702/tr04-0702
+INFO: 08/13/2018 13:23:25 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0703/tr04-0703
+INFO: 08/13/2018 13:23:26 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0710/tr04-0710
+INFO: 08/13/2018 13:23:27 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0726/tr04-0726
+INFO: 08/13/2018 13:23:28 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0741/tr04-0741
+INFO: 08/13/2018 13:23:29 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0746/tr04-0746
+INFO: 08/13/2018 13:23:30 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0762/tr04-0762
+INFO: 08/13/2018 13:23:31 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0785/tr04-0785
+INFO: 08/13/2018 13:23:33 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0805/tr04-0805
+INFO: 08/13/2018 13:23:34 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0806/tr04-0806
+INFO: 08/13/2018 13:23:35 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0808/tr04-0808
+INFO: 08/13/2018 13:23:36 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0825/tr04-0825
+INFO: 08/13/2018 13:23:38 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0829/tr04-0829
+INFO: 08/13/2018 13:23:39 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0864/tr04-0864
+INFO: 08/13/2018 13:23:40 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0878/tr04-0878
+INFO: 08/13/2018 13:23:41 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0882/tr04-0882
+INFO: 08/13/2018 13:23:42 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0887/tr04-0887
+INFO: 08/13/2018 13:23:43 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0900/tr04-0900
+INFO: 08/13/2018 13:23:45 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0908/tr04-0908
+INFO: 08/13/2018 13:23:46 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0909/tr04-0909
+INFO: 08/13/2018 13:23:47 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0913/tr04-0913
+INFO: 08/13/2018 13:23:48 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0915/tr04-0915
+INFO: 08/13/2018 13:23:49 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0931/tr04-0931
+INFO: 08/13/2018 13:23:50 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0933/tr04-0933
+INFO: 08/13/2018 13:23:51 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0939/tr04-0939
+INFO: 08/13/2018 13:23:53 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0959/tr04-0959
+INFO: 08/13/2018 13:23:54 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0960/tr04-0960
+INFO: 08/13/2018 13:23:55 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0963/tr04-0963
+INFO: 08/13/2018 13:23:56 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0966/tr04-0966
+INFO: 08/13/2018 13:23:57 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0983/tr04-0983
+INFO: 08/13/2018 13:23:58 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1006/tr04-1006
+INFO: 08/13/2018 13:24:00 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1013/tr04-1013
+INFO: 08/13/2018 13:24:01 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1021/tr04-1021
+INFO: 08/13/2018 13:24:02 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1023/tr04-1023
+INFO: 08/13/2018 13:24:03 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1032/tr04-1032
+INFO: 08/13/2018 13:24:04 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1034/tr04-1034
+INFO: 08/13/2018 13:24:05 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1064/tr04-1064
+INFO: 08/13/2018 13:24:06 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1078/tr04-1078
+INFO: 08/13/2018 13:24:08 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1087/tr04-1087
+INFO: 08/13/2018 13:24:09 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1096/tr04-1096
+INFO: 08/13/2018 13:24:10 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1097/tr04-1097
+INFO: 08/13/2018 13:24:11 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1105/tr04-1105
+INFO: 08/13/2018 13:24:12 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1117/tr04-1117
+INFO: 08/13/2018 13:24:13 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr06-0750/tr06-0750
+INFO: 08/13/2018 13:24:15 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr06-0764/tr06-0764
+INFO: 08/13/2018 13:24:16 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr06-0769/tr06-0769
+INFO: 08/13/2018 13:24:17 ###################### SCORE TRAINING SET #########################
+INFO: 08/13/2018 13:24:17 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0675/tr04-0675
+INFO: 08/13/2018 13:24:21 Salvo i files esito del training in training_output/tr04-0675.vec
+INFO: 08/13/2018 13:24:25  AUROC:0.500000 AUPRC:0.010973
+INFO: 08/13/2018 13:24:25 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0679/tr04-0679
+INFO: 08/13/2018 13:24:29 Salvo i files esito del training in training_output/tr04-0679.vec
+INFO: 08/13/2018 13:24:33  AUROC:0.500000 AUPRC:0.026545
+INFO: 08/13/2018 13:24:34 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0695/tr04-0695
+INFO: 08/13/2018 13:24:37 Salvo i files esito del training in training_output/tr04-0695.vec
+INFO: 08/13/2018 13:24:42  AUROC:0.500000 AUPRC:0.077506
+INFO: 08/13/2018 13:24:42 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0699/tr04-0699
+INFO: 08/13/2018 13:24:47 Salvo i files esito del training in training_output/tr04-0699.vec
+INFO: 08/13/2018 13:24:52  AUROC:0.500000 AUPRC:0.063458
+INFO: 08/13/2018 13:24:52 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0702/tr04-0702
+INFO: 08/13/2018 13:24:56 Salvo i files esito del training in training_output/tr04-0702.vec
+INFO: 08/13/2018 13:25:01  AUROC:0.500000 AUPRC:0.037078
+INFO: 08/13/2018 13:25:01 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0703/tr04-0703
+INFO: 08/13/2018 13:25:06 Salvo i files esito del training in training_output/tr04-0703.vec
+INFO: 08/13/2018 13:25:11  AUROC:0.500000 AUPRC:0.205004
+INFO: 08/13/2018 13:25:11 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0710/tr04-0710
+INFO: 08/13/2018 13:25:15 Salvo i files esito del training in training_output/tr04-0710.vec
+INFO: 08/13/2018 13:25:20  AUROC:0.500000 AUPRC:0.038607
+INFO: 08/13/2018 13:25:20 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0726/tr04-0726
+INFO: 08/13/2018 13:25:24 Salvo i files esito del training in training_output/tr04-0726.vec
+INFO: 08/13/2018 13:25:30  AUROC:0.500000 AUPRC:0.017083
+INFO: 08/13/2018 13:25:30 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0741/tr04-0741
+INFO: 08/13/2018 13:25:34 Salvo i files esito del training in training_output/tr04-0741.vec
+INFO: 08/13/2018 13:25:39  AUROC:0.500000 AUPRC:0.027643
+INFO: 08/13/2018 13:25:39 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0746/tr04-0746
+INFO: 08/13/2018 13:25:43 Salvo i files esito del training in training_output/tr04-0746.vec
+INFO: 08/13/2018 13:25:48  AUROC:0.500000 AUPRC:0.001226
+INFO: 08/13/2018 13:25:48 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0762/tr04-0762
+INFO: 08/13/2018 13:25:52 Salvo i files esito del training in training_output/tr04-0762.vec
+INFO: 08/13/2018 13:25:57  AUROC:0.500000 AUPRC:0.179235
+INFO: 08/13/2018 13:25:57 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0785/tr04-0785
+INFO: 08/13/2018 13:26:01 Salvo i files esito del training in training_output/tr04-0785.vec
+INFO: 08/13/2018 13:26:06  AUROC:0.500000 AUPRC:0.156027
+INFO: 08/13/2018 13:26:06 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0805/tr04-0805
+INFO: 08/13/2018 13:26:11 Salvo i files esito del training in training_output/tr04-0805.vec
+INFO: 08/13/2018 13:26:17  AUROC:0.500000 AUPRC:0.004122
+INFO: 08/13/2018 13:26:17 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0806/tr04-0806
+INFO: 08/13/2018 13:26:21 Salvo i files esito del training in training_output/tr04-0806.vec
+INFO: 08/13/2018 13:26:27  AUROC:0.500000 AUPRC:0.060673
+INFO: 08/13/2018 13:26:27 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0808/tr04-0808
+INFO: 08/13/2018 13:26:31 Salvo i files esito del training in training_output/tr04-0808.vec
+INFO: 08/13/2018 13:26:37  AUROC:0.500000 AUPRC:0.043496
+INFO: 08/13/2018 13:26:37 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0825/tr04-0825
+INFO: 08/13/2018 13:26:42 Salvo i files esito del training in training_output/tr04-0825.vec
+INFO: 08/13/2018 13:26:47  AUROC:0.500000 AUPRC:0.121742
+INFO: 08/13/2018 13:26:47 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0829/tr04-0829
+INFO: 08/13/2018 13:26:51 Salvo i files esito del training in training_output/tr04-0829.vec
+INFO: 08/13/2018 13:26:56  AUROC:0.500000 AUPRC:0.141932
+INFO: 08/13/2018 13:26:56 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0864/tr04-0864
+INFO: 08/13/2018 13:27:00 Salvo i files esito del training in training_output/tr04-0864.vec
+INFO: 08/13/2018 13:27:06  AUROC:0.500000 AUPRC:0.160381
+INFO: 08/13/2018 13:27:06 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0878/tr04-0878
+INFO: 08/13/2018 13:27:10 Salvo i files esito del training in training_output/tr04-0878.vec
+INFO: 08/13/2018 13:27:15  AUROC:0.500000 AUPRC:0.089870
+INFO: 08/13/2018 13:27:15 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0882/tr04-0882
+INFO: 08/13/2018 13:27:18 Salvo i files esito del training in training_output/tr04-0882.vec
+INFO: 08/13/2018 13:27:23  AUROC:0.500000 AUPRC:0.156287
+INFO: 08/13/2018 13:27:23 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0887/tr04-0887
+INFO: 08/13/2018 13:27:27 Salvo i files esito del training in training_output/tr04-0887.vec
+INFO: 08/13/2018 13:27:32  AUROC:0.500000 AUPRC:0.103919
+INFO: 08/13/2018 13:27:33 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0900/tr04-0900
+INFO: 08/13/2018 13:27:36 Salvo i files esito del training in training_output/tr04-0900.vec
+INFO: 08/13/2018 13:27:42  AUROC:0.500000 AUPRC:0.035923
+INFO: 08/13/2018 13:27:42 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0908/tr04-0908
+INFO: 08/13/2018 13:27:46 Salvo i files esito del training in training_output/tr04-0908.vec
+INFO: 08/13/2018 13:27:52  AUROC:0.500000 AUPRC:0.006046
+INFO: 08/13/2018 13:27:52 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0909/tr04-0909
+INFO: 08/13/2018 13:27:56 Salvo i files esito del training in training_output/tr04-0909.vec
+INFO: 08/13/2018 13:28:03  AUROC:0.500000 AUPRC:0.004890
+INFO: 08/13/2018 13:28:03 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0913/tr04-0913
+INFO: 08/13/2018 13:28:06 Salvo i files esito del training in training_output/tr04-0913.vec
+INFO: 08/13/2018 13:28:10  AUROC:0.500000 AUPRC:0.005421
+INFO: 08/13/2018 13:28:10 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0915/tr04-0915
+INFO: 08/13/2018 13:28:14 Salvo i files esito del training in training_output/tr04-0915.vec
+INFO: 08/13/2018 13:28:18  AUROC:0.500000 AUPRC:0.132523
+INFO: 08/13/2018 13:28:18 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0931/tr04-0931
+INFO: 08/13/2018 13:28:23 Salvo i files esito del training in training_output/tr04-0931.vec
+INFO: 08/13/2018 13:28:28  AUROC:0.500000 AUPRC:0.167460
+INFO: 08/13/2018 13:28:28 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0933/tr04-0933
+INFO: 08/13/2018 13:28:32 Salvo i files esito del training in training_output/tr04-0933.vec
+INFO: 08/13/2018 13:28:37  AUROC:0.500000 AUPRC:0.123409
+INFO: 08/13/2018 13:28:37 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0939/tr04-0939
+INFO: 08/13/2018 13:28:41 Salvo i files esito del training in training_output/tr04-0939.vec
+INFO: 08/13/2018 13:28:46  AUROC:0.500000 AUPRC:0.107657
+INFO: 08/13/2018 13:28:46 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0959/tr04-0959
+INFO: 08/13/2018 13:28:49 Salvo i files esito del training in training_output/tr04-0959.vec
+INFO: 08/13/2018 13:28:53  AUROC:0.500000 AUPRC:0.042377
+INFO: 08/13/2018 13:28:53 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0960/tr04-0960
+INFO: 08/13/2018 13:28:57 Salvo i files esito del training in training_output/tr04-0960.vec
+INFO: 08/13/2018 13:29:02  AUROC:0.500000 AUPRC:0.033238
+INFO: 08/13/2018 13:29:02 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0963/tr04-0963
+INFO: 08/13/2018 13:29:06 Salvo i files esito del training in training_output/tr04-0963.vec
+INFO: 08/13/2018 13:29:11  AUROC:0.500000 AUPRC:0.028346
+INFO: 08/13/2018 13:29:11 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0966/tr04-0966
+INFO: 08/13/2018 13:29:15 Salvo i files esito del training in training_output/tr04-0966.vec
+INFO: 08/13/2018 13:29:20  AUROC:0.500000 AUPRC:0.102450
+INFO: 08/13/2018 13:29:20 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-0983/tr04-0983
+INFO: 08/13/2018 13:29:24 Salvo i files esito del training in training_output/tr04-0983.vec
+INFO: 08/13/2018 13:29:30  AUROC:0.500000 AUPRC:0.059491
+INFO: 08/13/2018 13:29:30 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1006/tr04-1006
+INFO: 08/13/2018 13:29:34 Salvo i files esito del training in training_output/tr04-1006.vec
+INFO: 08/13/2018 13:29:39  AUROC:0.500000 AUPRC:0.006437
+INFO: 08/13/2018 13:29:39 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1013/tr04-1013
+INFO: 08/13/2018 13:29:42 Salvo i files esito del training in training_output/tr04-1013.vec
+INFO: 08/13/2018 13:29:47  AUROC:0.500000 AUPRC:0.054570
+INFO: 08/13/2018 13:29:47 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1021/tr04-1021
+INFO: 08/13/2018 13:29:51 Salvo i files esito del training in training_output/tr04-1021.vec
+INFO: 08/13/2018 13:29:55  AUROC:0.500000 AUPRC:0.196651
+INFO: 08/13/2018 13:29:55 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1023/tr04-1023
+INFO: 08/13/2018 13:29:59 Salvo i files esito del training in training_output/tr04-1023.vec
+INFO: 08/13/2018 13:30:04  AUROC:0.500000 AUPRC:0.021851
+INFO: 08/13/2018 13:30:04 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1032/tr04-1032
+INFO: 08/13/2018 13:30:08 Salvo i files esito del training in training_output/tr04-1032.vec
+INFO: 08/13/2018 13:30:13  AUROC:0.500000 AUPRC:0.027564
+INFO: 08/13/2018 13:30:13 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1034/tr04-1034
+INFO: 08/13/2018 13:30:17 Salvo i files esito del training in training_output/tr04-1034.vec
+INFO: 08/13/2018 13:30:22  AUROC:0.500000 AUPRC:0.001084
+INFO: 08/13/2018 13:30:22 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1064/tr04-1064
+INFO: 08/13/2018 13:30:26 Salvo i files esito del training in training_output/tr04-1064.vec
+INFO: 08/13/2018 13:30:32  AUROC:0.500000 AUPRC:0.027799
+INFO: 08/13/2018 13:30:32 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1078/tr04-1078
+INFO: 08/13/2018 13:30:36 Salvo i files esito del training in training_output/tr04-1078.vec
+INFO: 08/13/2018 13:30:41  AUROC:0.500000 AUPRC:0.089598
+INFO: 08/13/2018 13:30:41 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1087/tr04-1087
+INFO: 08/13/2018 13:30:44 Salvo i files esito del training in training_output/tr04-1087.vec
+INFO: 08/13/2018 13:30:48  AUROC:0.500000 AUPRC:0.057086
+INFO: 08/13/2018 13:30:48 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1096/tr04-1096
+INFO: 08/13/2018 13:30:52 Salvo i files esito del training in training_output/tr04-1096.vec
+INFO: 08/13/2018 13:30:57  AUROC:0.500000 AUPRC:0.205735
+INFO: 08/13/2018 13:30:57 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1097/tr04-1097
+INFO: 08/13/2018 13:31:01 Salvo i files esito del training in training_output/tr04-1097.vec
+INFO: 08/13/2018 13:31:07  AUROC:0.500000 AUPRC:0.038696
+INFO: 08/13/2018 13:31:07 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1105/tr04-1105
+INFO: 08/13/2018 13:31:10 Salvo i files esito del training in training_output/tr04-1105.vec
+INFO: 08/13/2018 13:31:14  AUROC:0.500000 AUPRC:0.227959
+INFO: 08/13/2018 13:31:14 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr04-1117/tr04-1117
+INFO: 08/13/2018 13:31:18 Salvo i files esito del training in training_output/tr04-1117.vec
+INFO: 08/13/2018 13:31:24  AUROC:0.500000 AUPRC:0.023731
+INFO: 08/13/2018 13:31:24 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr06-0750/tr06-0750
+INFO: 08/13/2018 13:31:29 Salvo i files esito del training in training_output/tr06-0750.vec
+INFO: 08/13/2018 13:31:35  AUROC:0.500000 AUPRC:0.123594
+INFO: 08/13/2018 13:31:35 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr06-0764/tr06-0764
+INFO: 08/13/2018 13:31:39 Salvo i files esito del training in training_output/tr06-0764.vec
+INFO: 08/13/2018 13:31:44  AUROC:0.500000 AUPRC:0.178409
+INFO: 08/13/2018 13:31:45 Loading record: /opt/PHYSIONET/ch2018_mini2/training/tr06-0769/tr06-0769
+INFO: 08/13/2018 13:31:48 Salvo i files esito del training in training_output/tr06-0769.vec
+INFO: 08/13/2018 13:31:52  AUROC:0.500000 AUPRC:0.150090
+INFO: 08/13/2018 13:31:52 
+
+INFO: 08/13/2018 13:31:52 Training AUROC Performance (gross): 0.500000
+INFO: 08/13/2018 13:31:52 Training AUPRC Performance (gross): 0.077174
+INFO: 08/13/2018 13:31:52 
+
+INFO: 08/13/2018 13:31:52 ####################### PACKAGE ENTRY #############################
+INFO: 08/13/2018 13:34:02 Execution stops at: 2018-08-13 13:23:10.056863
+INFO: 08/13/2018 13:34:02  Elapsed Time: 0:10:52.177754
